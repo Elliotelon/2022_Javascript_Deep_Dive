@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step02_operator</title>
+</head>
+<body>
+    <script>
+        // NaN은 자신과 일치하지 않는 유일한 값이다.
+        console.log(NaN === NaN); // -> false
+
+        // isNaN 함수는 지정한 값이 NaN인지 확인하고 그 결과를 불리언 값으로 반환한다.
+        console.log(isNaN(NaN)); // -> true
+        console.log(isNaN(10)); // -> false
+        console.log(isNaN(1+undefined)); // -> true
+
+        // 양의 0과 음의 0의 비교. 일치 비교/도응 비교 모두 결과는 true이다.
+        console.log(0 === -0); // -> true
+        console.log(0 == -0); // -> true
+
+        // Object.is
+        console.log(Object.is(-0, 0)); // -> false
+        console.log(Object.is(NaN, NaN)); // -> true
+
+        //삼항 조건 연산자
+        var x = 2;
+        // 2 % 2는 0이고, false로 암묵적 타입이 변환된다.
+        var result = x % 2 ? '홀수' : '짝수';
+        console.log(result);
+        console.log(!'hello'); // -> false
+
+    </script>
+</body>
+</html>
