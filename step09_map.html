@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      const movieDatas = [
+          {id: "m1", topic: "topic1"},
+          {id: "m2", topic: "topic2"},
+          {id: "m3", topic: "topic3"},
+      ]
+
+      const map1 = movieDatas.map((movieData) => movieData.id+3);
+      console.log(map1) // [m13, m23, m33]
+    </script>
+</body>
+</html>
