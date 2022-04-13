@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const fakeFactorial = (n) => {
+        var result = 1;
+        for (var i = 1; i <= n; i++) {
+          result *= i;
+        }
+        return result;
+      }
+      console.log(fakeFactorial(3)); // 3 * 2 * 1 = 6
+      console.log(fakeFactorial(4)); // 4 * 3 * 2 * 1 = 24
+
+      // 재귀를 이용한 factorial(계승) 함수
+      const factorial = (n) => {
+        if (n == 0 || n == 1) {
+          return 1;
+        }
+        return n * factorial(n - 1);
+      } // 자기 자신을 다시 호출
+      console.log(factorial(3)); // 파라미터가 3이라면 3 * factorial(2) * factorial(1)
+
+      // 삼항 연산자를 이용한 계승 재귀함수
+      const fact = (n) => {
+        return n > 1 ? n * fact(n - 1) : 1;
+      }
+      console.log(fact(5)); // 120
+    </script>
+  </body>
+</html>
