@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const mapObj = new Map([
+            ["지역", "서울"]
+        ]);
+        mapObj.set("이름","kim")
+        mapObj.set("나이", 30)
+        console.log(mapObj) // {'지역' => '서울', '이름' => 'kim', '나이' => 30}
+        console.log(mapObj.get("이름")) // kim
+        
+    </script>
+</body>
+</html>
